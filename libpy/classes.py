@@ -134,10 +134,15 @@ class map:
 		import numpy as np
 		# check given state
 		state=np.array(state)
-		if state.shape!=self.shape: return
+		shape=state.shape
+		if (shape[0]>self.shape[0]) & (shape[1]>self.shape[1]):
+			print ("WARNING! state.shape = (%d, %d)" %state.shape+
+					 " != (%d, %d) = map.shape" %self.shape)
+			return
 		# cycle on cells
 		for (id, cell) in self.cells.iteritems():
-			cell.state=state[id[0], id[1]]
+			if (id[0]<shape[0]) & (id[1]<shape[1]):
+				cell.state=state[id[0], id[1]]
    #
    #----------------------------------------------------------------------------
 	def getage(self):

@@ -11,24 +11,25 @@ TESTOUT=
 
 # Esamples
 #
-RANDIN =
-RANDSRC=examples/random.py
-RANDOUT=
+example=cannon
+EXPLIN =
+EXPLSRC=examples/$(example).py
+EXPLOUT=examples/$(example).gif
 
 # Objects
 #
-default: random
-all: test random
+default: examples
+all: test examples
 #
 test: $(TESTSRC) $(TESTIN)
 	@echo running $(TESTSRC) with $(PY)
 	@$(PY) $(PYFLAGS) $(TESTSRC)
 #
-random: $(RANDSRC) $(RANDIN)
-	@echo running $(RANDSRC) with $(PY)
-	@$(PY) $(PYFLAGS) $(RANDSRC)
+examples: $(EXPLSRC) $(EXPLIN)
+	@echo running $(EXPLSRC) with $(PY)
+	@$(PY) $(PYFLAGS) $(EXPLSRC)
 # force
-.PHONY: test
+.PHONY: test examples
 
 # Clean utils
 #
@@ -44,4 +45,4 @@ clean-test:
 #
 clean-examples:
 	@echo cleaning examples
-	@rm -rf $(RANDOUT) $(RANDSRC)~
+	@rm -rf $(EXPLOUT) $(EXPLSRC)~ examples/*~

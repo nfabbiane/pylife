@@ -2,3 +2,5 @@
 *~
 # python temporary files
 *.pyc
+# outputs
+*.gif
