@@ -32,15 +32,16 @@ random: $(RANDSRC) $(RANDIN)
 
 # Clean utils
 #
-clean-all: clean-libpy clean-test
-clean-libpy:
-	@cleaning libpy
+clean-all: clean-py clean-test clean-examples
+clean-py:
+	@echo cleaning python files
 	@rm -rf libpy/*.pyc libpy/*~
+	@rm -rf *.pyc *~
 #
 clean-test:
 	@echo cleaning test
 	@rm -rf $(TESTOUT) $(TESTSRC)~
 #
-clean-rand:
-	@echo cleaning random example
+clean-examples:
+	@echo cleaning examples
 	@rm -rf $(RANDOUT) $(RANDSRC)~
