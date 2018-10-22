@@ -1,0 +1,4 @@
+# general temporary files
+*~
+# python temporary files
+*.pyc
