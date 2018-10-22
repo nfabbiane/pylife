@@ -11,7 +11,7 @@ install:
 
 script:
    - make test
-   - make example example=cannon
+   - make examples example=cannon
 
 notifications:
   email: false
