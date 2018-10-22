@@ -64,14 +64,14 @@ class lite:
 # Full (with matplotlib)
 #
 class full:
-	def open(self, shape=[1., 1.], border=0):
+	def open(self, shape=[1., 1.], border=0, pixel=5):
 		"""
 		opens a matplotlib based plot
 		"""
 		import numpy as np
 		import matplotlib.pyplot as plt
 		# initialize figure and axis
-		figsize=np.flip(shape)/float(np.max(shape))*5.
+		figsize=np.flip(shape)/float(np.max(shape))/2.54*pixel
 		self.fig=plt.figure(figsize=figsize)
 		#initialize axis
 		position=[border, border, 1.-2*border, 1.-2*border]
