@@ -18,8 +18,8 @@ The examples can be run via the `Makefile`
 
     make examples example=<name-of-the-example>
 
-### `cannon`: Goseper's gliders cannon
-The Goseper's gliders cannon is taken as initial condition.
+### `cannon`: Gosper's gliders cannon
+The Gosper's gliders cannon is taken as initial condition.
 The output is the file `examples/cannon.gif` that collects in an animated
 image the time evolution of the map.
 
