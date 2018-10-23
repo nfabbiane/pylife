@@ -24,10 +24,10 @@ def check_square(steps):
 	map = life.map(shape=[3, 3])
 	# initialize plot
 	plt = life.plot.lite(); plt.open()
-	# states of the period 2 orbit
+	# steady state
 	square=[[1, 1, 0],
-			  [1, 0, 1],
-			  [0, 1, 0]]
+			  [1, 1, 0],
+			  [0, 0, 0]]
 	# initialize state
 	map.setstate(square)
 	plt.plot(map)
@@ -37,7 +37,7 @@ def check_square(steps):
 	for i in range(steps):
 		map.step()
 		plt.plot(map, step=i+1)
-		# check periodic orbit
+		# check steady state
 		check=check&(square==map.getstate()).all()
 	# close plot session
 	plt.close()
@@ -89,7 +89,7 @@ def check_glider(steps):
 	map = life.map(shape=[5, 5], bc=["periodic", "periodic"])
 	# initialize plot
 	plt = life.plot.lite(); plt.open()
-	# states of the period 2 orbit
+	# initial state
 	glider=[[1, 0, 0, 0, 0],
 			  [0, 1, 1, 0, 0],
 			  [1, 1, 0, 0, 0],
@@ -104,7 +104,7 @@ def check_glider(steps):
 	for i in range(0, steps):
 		map.step()
 		plt.plot(map, step=i+1)
-		# check bullet
+		# check glider
 		if (i+1)%20==0: check=check&(glider==map.getstate()).all()
 	# close plot session
 	plt.close()
