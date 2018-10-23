@@ -8,7 +8,7 @@ python:
 install:
    - pip install -U pip
    - pip install pytest pytest-pep8
-   - pip install matplotlib
+   - pip install matplotlib >= 2.2.3
 
 script:
    - make test
