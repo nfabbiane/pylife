@@ -71,7 +71,7 @@ class full:
 		import numpy as np
 		import matplotlib.pyplot as plt
 		# initialize figure and axis
-		figsize=np.flip(shape)/float(np.max(shape))/2.54*pixel
+		figsize=np.flip(shape, 0)/float(np.max(shape))/2.54*pixel
 		self.fig=plt.figure(figsize=figsize)
 		#initialize axis
 		position=[border, border, 1.-2*border, 1.-2*border]
