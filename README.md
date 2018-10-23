@@ -5,7 +5,7 @@
 
 * * *
 `master`:
-[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=master)](https://travis-ci.com/nfabbiane/pylife/builds) &#9 
+[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=master)](https://travis-ci.com/nfabbiane/pylife/builds) and 
 `devel`:
 [![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=devel)](https://travis-ci.com/nfabbiane/pylife/builds)
 * * *
