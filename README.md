@@ -5,9 +5,9 @@
 
 * * *
 `master`:
-[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=master)](https://travis-ci.com/nfabbiane/pylife/builds) and 
+[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=master)](https://travis-ci.com/nfabbiane/pylife/builds) 
 `devel`:
-[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=devel)](https://travis-ci.com/nfabbiane/pylife/builds)
+[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=devel)](https://travis-ci.com/nfabbiane/pylife/builds) 
 * * *
 
 
