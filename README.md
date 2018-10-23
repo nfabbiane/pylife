@@ -8,10 +8,21 @@
 * * *
 
 ## Repository structure
-+ `life.py`:   **main** library of this Game of Life (GoF) implementation 
-+ `libpy/`:    folder of the sources of the sublibraries imported in `life.py`
-+ `examples/`: folder of the examples of the usage of the library
-+ `tests/`:    folder of the testing tools for the library
++ `life.py`: **main library** of Game of Life (GoL) 
+
++ `examples/`: folder of the examples
+    + `cannon.py`: Gosper's gliders cannon
+    + `rand-init.py`: simultion from random initial condition
+    
++ `tests/`: folder of the testing tools for the library
+    + `test.py`: testing tools
+    
++ `libpy/`: folder of the sources of the sublibraries imported in `life.py`
+    + `classes.py`: data class definition
+    + `plot.py`: plotting tools
+    + `rules.py`: GoL rules library
+
+
 
 ## Examples
 The examples can be run via the `Makefile`
@@ -28,12 +39,14 @@ The map is evolved starting from a random initial condition.
 The visualisation is based on a simple terminal-based text-output; the same
 visualisation technique is used in the tests.
 
+
+
 ## Tests
 The tests can be run via the `Makefile`
     
     make test
 
-and consist in reproducing some known solutions of the GoF, nominally:
+and consist in reproducing some known solutions of the GoL, nominally:
 - the steady *square* solution
 - the period-two *propeller*
 - the travelling *glider*
