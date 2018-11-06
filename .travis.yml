@@ -18,7 +18,7 @@ script:
    #- make PY=py.test PYFLAGS='--cov=srcpy' test
    #- make PY=py.test PYFLAGS='--cov=srcpy' examples example=rand-init
    #- make PY=py.test PYFLAGS='--cov=srcpy' examples example=cannon
-   - py.test test/test.py --cov=srcpy
+   - py.test examples/cannon.py --cov=libpy
    
 after_success:
    - coveralls
