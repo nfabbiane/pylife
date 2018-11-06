@@ -3,14 +3,15 @@
 # GAME OF LIFE LIBRARY                                                         #
 #                                                                              #
 ################################################################################
-
+import pkgutil
+__path__ = pkgutil.extend_path(__path__, __name__)
 
 
 
 ################################################################################
 # Load classes
 #
-from classes import *
+from libpy.classes import *
 
 
 
@@ -18,4 +19,4 @@ from classes import *
 ################################################################################
 # Plotting utils
 #
-import plot
+import libpy.plot as plot
