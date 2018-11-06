@@ -55,7 +55,6 @@ class lite:
 		"""
 		import curses
 		# close
-		self.stdscr.refresh()
 		curses.endwin()
 	
 

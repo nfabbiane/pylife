@@ -15,7 +15,7 @@ before_script: # configure a headless display to test plot generation
    - sleep 3 
 
 script:
-   - make PY=py.test PYFLAGS='--cov=libpy' test
+   - make PY='pytest' PYFLAGS='--cov=libpy' test
    
 after_success:
    - coveralls
