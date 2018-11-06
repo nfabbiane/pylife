@@ -16,6 +16,7 @@ before_script: # configure a headless display to test plot generation
 
 script:
    - make test
+   - make examples example=rand-init
    - make examples example=cannon
 
 notifications:
