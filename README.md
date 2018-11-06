@@ -5,9 +5,12 @@
 
 * * *
 `master`:
-[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=master)](https://travis-ci.com/nfabbiane/pylife/builds) 
+[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=master)](https://travis-ci.com/nfabbiane/pylife/builds)
+[![Coverage Status](https://coveralls.io/repos/github/nfabbiane/pylife/badge.svg?branch=master)](https://coveralls.io/github/nfabbiane/pylife?branch=master)
+
 `devel`:
-[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=devel)](https://travis-ci.com/nfabbiane/pylife/builds) 
+[![Build Status](https://travis-ci.com/nfabbiane/pylife.svg?branch=devel)](https://travis-ci.com/nfabbiane/pylife/builds)
+[![Coverage Status](https://coveralls.io/repos/github/nfabbiane/pylife/badge.svg?branch=devel)](https://coveralls.io/github/nfabbiane/pylife?branch=devel)
 * * *
 
 
