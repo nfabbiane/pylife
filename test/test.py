@@ -32,17 +32,17 @@ def check_square(steps):
 	map.setstate(square)
 	plt.plot(map)
 	# - check
-	check=(square==map.getstate()).all()
+	pass=(square==map.getstate()).all()
 	# step state
 	for i in range(steps):
 		map.step()
 		plt.plot(map, step=i+1)
 		# check steady state
-		check=check&(square==map.getstate()).all()
+		pass=pass&(square==map.getstate()).all()
 	# close plot session
 	plt.close()
 	# output
-	return check
+	assert(pass)
 
 
 
@@ -66,17 +66,17 @@ def check_propeller(steps):
 	map.setstate(propeller[0])
 	plt.plot(map)
 	# - check
-	check=(propeller[0]==map.getstate()).all()
+	pass=(propeller[0]==map.getstate()).all()
 	# step state
 	for i in range(steps):
 		map.step()
 		plt.plot(map, step=i+1)
 		# check periodic orbit
-		check=check&(propeller[(i+1)%2]==map.getstate()).all()
+		pass=pass&(propeller[(i+1)%2]==map.getstate()).all()
 	# close plot session
 	plt.close()
 	# output
-	return check
+	assert(pass)
 
 
 
@@ -84,7 +84,7 @@ def check_propeller(steps):
 ################################################################################
 # Define glider solution check
 #
-def check_glider(steps):
+def test_glider(steps=20):
 	# initialize
 	map = pylife.map(shape=[5, 5], bc=["periodic", "periodic"])
 	# initialize plot
@@ -99,17 +99,17 @@ def check_glider(steps):
 	map.setstate(glider)
 	plt.plot(map)
 	# - check
-	check=(glider==map.getstate()).all()
+	pass=(glider==map.getstate()).all()
 	# step state
 	for i in range(0, steps):
 		map.step()
 		plt.plot(map, step=i+1)
 		# check glider
-		if (i+1)%20==0: check=check&(glider==map.getstate()).all()
+		if (i+1)%20==0: pass=pass&(glider==map.getstate()).all()
 	# close plot session
 	plt.close()
 	# output
-	return check
+	assert(pass)
 
 
 
@@ -117,6 +117,8 @@ def check_glider(steps):
 ################################################################################
 # run tests
 #
-assert(check_square(10))
-assert(check_propeller(10))
-assert(check_glider(20))
+if __name__ == "__main__":
+
+	test_square()
+	test_propeller()
+	test_glider()
