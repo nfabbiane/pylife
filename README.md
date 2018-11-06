@@ -19,7 +19,7 @@
     + `cannon.py`: Gosper's gliders cannon
     + `rand-init.py`: simultion from random initial condition
     
-+ `tests/`: folder of the testing tools for the library
++ `test/`: folder of the testing tools for the library
     + `test.py`: testing tools
     
 + `libpy/`: folder of the sources of the sublibraries imported in `__init__.py`
