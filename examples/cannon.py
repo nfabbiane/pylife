@@ -1,6 +1,6 @@
 ##############################################################################80
 #                                                                              #
-# GOSPER CANNON WITH PERIODIC BOUNDARY CONDITIONS                              #
+# GOSPER CANNON                                                                #
 #                                                                              #
 ################################################################################
 import sys
@@ -68,5 +68,5 @@ plt.plot(map, step=0)
 for i in range(steps):
 	map.step()
 	plt.plot(map, step=i+1)
-# close plot session
+# close plot session and save gif
 plt.close(fps=fps)
