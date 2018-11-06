@@ -6,7 +6,7 @@ python:
 
 install:
    - pip install -U pip
-   - pip install pytest pytest-pep8
+   - pip install pytest pytest-pep8 python-coveralls
    - pip install matplotlib
 
 before_script: # configure a headless display to test plot generation
@@ -18,6 +18,9 @@ script:
    - make test
    - make examples example=rand-init
    - make examples example=cannon
+   
+after_success:
+   - coveralls
 
 notifications:
   email: false
