@@ -32,17 +32,17 @@ def check_square(steps):
 	map.setstate(square)
 	plt.plot(map)
 	# - check
-	pass=(square==map.getstate()).all()
+	passed=(square==map.getstate()).all()
 	# step state
 	for i in range(steps):
 		map.step()
 		plt.plot(map, step=i+1)
 		# check steady state
-		pass=pass&(square==map.getstate()).all()
+		passed=passed&(square==map.getstate()).all()
 	# close plot session
 	plt.close()
 	# output
-	assert(pass)
+	assert(passed)
 
 
 
@@ -66,17 +66,17 @@ def check_propeller(steps):
 	map.setstate(propeller[0])
 	plt.plot(map)
 	# - check
-	pass=(propeller[0]==map.getstate()).all()
+	passed=(propeller[0]==map.getstate()).all()
 	# step state
 	for i in range(steps):
 		map.step()
 		plt.plot(map, step=i+1)
 		# check periodic orbit
-		pass=pass&(propeller[(i+1)%2]==map.getstate()).all()
+		passed=passed&(propeller[(i+1)%2]==map.getstate()).all()
 	# close plot session
 	plt.close()
 	# output
-	assert(pass)
+	assert(passed)
 
 
 
@@ -99,17 +99,17 @@ def test_glider(steps=20):
 	map.setstate(glider)
 	plt.plot(map)
 	# - check
-	pass=(glider==map.getstate()).all()
+	passed=(glider==map.getstate()).all()
 	# step state
 	for i in range(0, steps):
 		map.step()
 		plt.plot(map, step=i+1)
 		# check glider
-		if (i+1)%20==0: pass=pass&(glider==map.getstate()).all()
+		if (i+1)%20==0: passed=passed&(glider==map.getstate()).all()
 	# close plot session
 	plt.close()
 	# output
-	assert(pass)
+	assert(passed)
 
 
 
