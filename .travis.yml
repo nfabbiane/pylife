@@ -15,9 +15,9 @@ before_script: # configure a headless display to test plot generation
    - sleep 3 
 
 script:
-   - make PY=py.test PYFLAGS='--cov src' test
-   - make PY=py.test PYFLAGS='--cov src' examples example=rand-init
-   - make PY=py.test PYFLAGS='--cov src' examples example=cannon
+   - make PY=py.test PYFLAGS='--cov=libpy' test
+   - make PY=py.test PYFLAGS='--cov=libpy' examples example=rand-init
+   - make PY=py.test PYFLAGS='--cov=libpy' examples example=cannon
    
 after_success:
    - coveralls
