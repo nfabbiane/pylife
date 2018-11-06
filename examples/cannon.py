@@ -8,10 +8,10 @@ import os
 
 # add library dir to path
 pwd=os.path.dirname(os.path.abspath(__file__))
-sys.path.append(pwd+"/../")
+sys.path.append(pwd+"/../../")
 
 # import life library
-import life
+import pylife
 
 
 
@@ -58,9 +58,9 @@ shape[1]*=cannon.shape[1]
 # Example 
 #
 # initialize map
-map = life.map(shape=shape, bc=bc)
+map = pylife.map(shape=shape, bc=bc)
 # initialize plot
-plt = life.plot.full(); plt.open(shape=map.shape)
+plt = pylife.plot.full(); plt.open(shape=map.shape)
 # set initial condition
 map.setstate(cannon)
 plt.plot(map, step=0)

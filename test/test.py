@@ -8,10 +8,10 @@ import os
 
 # add library dir to path
 pwd=os.path.dirname(os.path.abspath(__file__))
-sys.path.append(pwd+"/../")
+sys.path.append(pwd+"/../../")
 
 # import life library
-import life
+import pylife
 
 
 
@@ -21,9 +21,9 @@ import life
 #
 def check_square(steps):
 	# initialize
-	map = life.map(shape=[3, 3])
+	map = pylife.map(shape=[3, 3])
 	# initialize plot
-	plt = life.plot.lite(); plt.open()
+	plt = pylife.plot.lite(); plt.open()
 	# steady state
 	square=[[1, 1, 0],
 			  [1, 1, 0],
@@ -52,9 +52,9 @@ def check_square(steps):
 #
 def check_propeller(steps):
 	# initialize
-	map = life.map(shape=[3, 3])
+	map = pylife.map(shape=[3, 3])
 	# initialize plot
-	plt = life.plot.lite(); plt.open()
+	plt = pylife.plot.lite(); plt.open()
 	# states of the period 2 orbit
 	propeller=[[[0, 0, 0],
 					[1, 1, 1],
@@ -86,9 +86,9 @@ def check_propeller(steps):
 #
 def check_glider(steps):
 	# initialize
-	map = life.map(shape=[5, 5], bc=["periodic", "periodic"])
+	map = pylife.map(shape=[5, 5], bc=["periodic", "periodic"])
 	# initialize plot
-	plt = life.plot.lite(); plt.open()
+	plt = pylife.plot.lite(); plt.open()
 	# initial state
 	glider=[[1, 0, 0, 0, 0],
 			  [0, 1, 1, 0, 0],

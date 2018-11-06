@@ -8,10 +8,10 @@ import os
 
 # add library dir to path
 pwd=os.path.dirname(os.path.abspath(__file__))
-sys.path.append(pwd+"/../")
+sys.path.append(pwd+"/../../")
 
 # import life library
-import life
+import pylife
 
 
 
@@ -33,9 +33,9 @@ fps = 30
 # Example 
 #
 # initialize map
-map = life.map(shape=shape, bc=bc)
+map = pylife.map(shape=shape, bc=bc)
 # initialize plot
-plt = life.plot.lite(); plt.open()
+plt = pylife.plot.lite(); plt.open()
 # random initial condition
 map.rand()
 plt.plot(map)

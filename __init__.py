@@ -8,21 +8,6 @@
 
 
 ################################################################################
-# Initialize
-#
-def __init__():
-	import sys
-	import os
-	# add library dir to path
-	pwd=os.path.dirname(os.path.abspath(__file__))
-	sys.path.append(pwd+"/libpy")
-# run init
-__init__()
-
-
-
-
-################################################################################
 # Load classes
 #
 from classes import *
