@@ -100,7 +100,7 @@ class full:
 			# wait
 			time.sleep(wait)
 	#
-   #----------------------------------------------------------------------------
+	#----------------------------------------------------------------------------
 	def close(self, fps=0):
 		"""
 		closes a matplotlib based plot and saves animated gif if fps>0
