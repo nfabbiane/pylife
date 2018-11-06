@@ -54,7 +54,8 @@ class lite:
 		closes a terminal based plot
 		"""
 		import curses
-		# initialize
+		# close
+		self.stdscr.refresh()
 		curses.endwin()
 	
 
