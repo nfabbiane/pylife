@@ -13,7 +13,7 @@
 
 
 ## Repository structure
-+ `life.py`: **main library** of Game of Life (GoL) 
++ `__init__.py`: **library initialisation** of Game of Life (GoL) 
 
 + `examples/`: folder of the examples
     + `cannon.py`: Gosper's gliders cannon
@@ -22,7 +22,7 @@
 + `tests/`: folder of the testing tools for the library
     + `test.py`: testing tools
     
-+ `libpy/`: folder of the sources of the sublibraries imported in `life.py`
++ `libpy/`: folder of the sources of the sublibraries imported in `__init__.py`
     + `classes.py`: data class definition
     + `plot.py`: plotting tools
     + `rules.py`: GoL rules library

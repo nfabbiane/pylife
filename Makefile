@@ -36,6 +36,7 @@ examples: $(EXPLSRC) $(EXPLIN)
 clean-all: clean-py clean-test clean-examples
 clean-py:
 	@echo cleaning python files
+	@rm -rf libpy/*.pyc libpy/*~
 	@rm -rf *.pyc *~
 #
 clean-test:
