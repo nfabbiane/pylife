@@ -15,9 +15,9 @@ before_script: # configure a headless display to test plot generation
    - sleep 3 
 
 script:
-   - make test
-   - make examples example=rand-init
-   - make examples example=cannon
+   - make PY=py.test test
+   - make PY=py.test examples example=rand-init
+   - make PY=py.test examples example=cannon
    
 after_success:
    - coveralls
