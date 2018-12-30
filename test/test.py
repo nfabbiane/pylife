@@ -17,9 +17,9 @@ import pylife
 
 
 ################################################################################
-# Define square steady solution check
+# Test square steady solution
 #
-def check_square(steps=10):
+def test_square(steps=10):
 	# initialize
 	map = pylife.map(shape=[3, 3])
 	# steady state
@@ -42,9 +42,9 @@ def check_square(steps=10):
 
 
 ################################################################################
-# Define propeller periodic orbit check
+# Test propeller periodic orbit
 #
-def check_propeller(steps=10):
+def test_propeller(steps=10):
 	# initialize
 	map = pylife.map(shape=[3, 3])
 	# states of the period 2 orbit
@@ -70,7 +70,7 @@ def check_propeller(steps=10):
 
 
 ################################################################################
-# Define glider solution check
+# Test glider solution
 #
 def test_glider(steps=20):
 	# initialize
@@ -97,9 +97,25 @@ def test_glider(steps=20):
 
 
 ################################################################################
-# Define propeller periodic orbit check
+# Test plot
 #
-def check_plot_lite(steps=10):
+def test_plot_lite(steps=10):
+	# initialize
+	map = pylife.map(shape=[3, 3])
+	# initialize plot
+	plt = pylife.plot.lite(); plt.open()
+	# initialize state (random)
+	map.rand()
+	plt.plot(map, step=0)
+	# step state
+	for i in range(steps):
+		map.step()
+		plt.plot(map, step=i+1)
+	# close plot session
+	plt.close()
+#
+#-------------------------------------------------------------------------------
+def test_plot_lite(steps=10):
 	# initialize
 	map = pylife.map(shape=[3, 3])
 	# initialize plot
