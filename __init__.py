@@ -10,7 +10,7 @@
 ################################################################################
 # Load classes
 #
-from libpy.classes import *
+from srcpy.classes import *
 
 
 
@@ -18,7 +18,7 @@ from libpy.classes import *
 ################################################################################
 # Plotting utils
 #
-import libpy.plot as plot
+import srcpy.plot as plot
 
 
 
@@ -26,4 +26,4 @@ import libpy.plot as plot
 ################################################################################
 # Delete 'libpy' collection
 #
-del libpy
+del srcpy
